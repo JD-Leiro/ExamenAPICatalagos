@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <title>@ViewBag.Title - Web Asp NET ADO NET</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Examen de ingreso">
+    <meta name="description" content="Examen sobre Web Api Catalagos, autor: Ing. Jesús David Leiro Pacheco">
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar-expand-lg navbar-dark bg-dark">
+        <div class="nav justify-content-center">
+            <p class="text-white fs-5 pt-2">Examen de ingreso - Catálagos</p>
+        </div>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
+        </footer>
+    </div>
+    <script src="~/Scripts/jquery-3.6.0.min.js"></script>
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="~/Scripts/sweetalert2.all.min.js"></script>
+</body>
+</html>

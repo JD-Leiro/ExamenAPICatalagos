@@ -1,0 +1,131 @@
+﻿
+@{
+    ViewBag.Title = "Catálagos";
+}
+<div>
+    <br />
+    <h2>Catálagos</h2><hr />
+    <form class="needs-validation" novalidate method="post" id="frm">
+        <div class="container form-content">
+            <fieldset>
+                <legend id="tituloFrm">Vehículos</legend>
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="Marca" class="col-form-label">Marca:</label>
+                    </div>
+                    <div class="col-8">
+                        <select class="form-select ctrl" id="Marca" required>
+                        </select>
+                        <div class="invalid-feedback">
+                            ¡Campo obligatorio!
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="Submarca" class="col-form-label">Submarca:</label>
+                    </div>
+                    <div class="col-8">
+                        <select class="form-select ctrl" id="Submarca" required>
+                        </select>
+                        <div class="invalid-feedback">
+                            ¡Campo obligatorio!
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="Modelo" class="col-form-label">Modelo:</label>
+                    </div>
+                    <div class="col-8">
+                        <select class="form-select ctrl" id="Modelo" required>
+                        </select>
+                        <div class="invalid-feedback">
+                            ¡Campo obligatorio!
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="Descripcion" class="col-form-label">Descripción:</label>
+                    </div>
+                    <div class="col-8">
+                        <select class="form-select ctrl cbo" id="Descripcion" required>
+                        </select>
+                        <div class="invalid-feedback">
+                            ¡Campo obligatorio!
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-11">
+                    </div>
+                    <div class="col">
+                        <div id="cargaCbo">
+                            <div class="spinner-border spinner-border-sm" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+        <br />
+        <div class="container form-content">
+            <fieldset>
+                <legend id="tituloFrm">Domicilio</legend>
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="CP" class="col-form-label">Código Postal:</label>
+                    </div>
+                    <div class="col-8">
+                        <input type="text" class="form-control ctrl" id="CP" min="5" maxlength="5" pattern="^[0-9]{5}" required />
+                        <div class="invalid-feedback">
+                            ¡Campo obligatorio, debe ser un C.P válido: máximo 5 números!
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="Estado" class="col-form-label">Estado:</label>
+                    </div>
+                    <div class="col-8">
+                        <input type="text" class="form-control ctrl ctrlDomicilio" id="Estado" required />
+                        <div class="invalid-feedback">
+                            ¡Campo obligatorio!
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="Municipio" class="col-form-label">Municipio:</label>
+                    </div>
+                    <div class="col-8">
+                        <input type="text" class="form-control ctrl ctrlDomicilio" id="Municipio" required />
+                        <div class="invalid-feedback">
+                            ¡Campo obligatorio!
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="Colonia" class="col-form-label">Colonia:</label>
+                    </div>
+                    <div class="col-8">
+                        <input type="text" class="form-control ctrl ctrlDomicilio" id="Colonia" required />
+                        <div class="invalid-feedback">
+                            ¡Campo obligatorio!
+                        </div>
+                    </div>
+                </div>
+                <br />
+            </fieldset>
+        </div><br />
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary">Validar Datos</button>
+            <button type="button" class="btn btn-secondary" id="btnCancelar">Borrar validación</button>
+        </div>
+    </form>
+</div>
+<script src="~/Scripts/Site.js"></script>
